@@ -14,6 +14,7 @@ const {title, description, image = '/profile.webp', ogType = 'website'} = Astro.
 ---
 
 <!-- Global Metadata -->
+<!--suppress ALL -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
@@ -36,6 +37,8 @@ const {title, description, image = '/profile.webp', ogType = 'website'} = Astro.
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<link rel="sitemap" href="/sitemap-index.xml"/>
 
 <!-- Google tag (gtag.js) -->
 <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-H5RYW6KRYD"></script>
