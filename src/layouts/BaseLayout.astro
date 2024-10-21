@@ -20,9 +20,11 @@ const {
 
 <!doctype html>
 <html lang="en" data-theme="night">
-<head title={title}>
-    <BaseHead title={title} description={description} image={image} , ogType={ogType} />
-    {TRANSITION_API && <ViewTransitions />}
+<head>
+  <BaseHead title={title} description={description} image={image} , ogType={ogType}/>
+  {TRANSITION_API &&
+      <ViewTransitions/>}
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' https://c1.ty-cdn.net;">
   {includeComments && (<script>talkyardServerUrl = 'https://site-3llujd7fnz.talkyard.net';</script>
       <script async defer src="https://c1.ty-cdn.net/-/talkyard-comments.min.js"></script>
       <noscript>Please enable Javascript to view comments.</noscript>)}
