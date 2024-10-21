@@ -6,17 +6,21 @@ import createSlug from "../../lib/createSlug"
 
 export async function getStaticPaths() {
   const postEntries = await getCollection("blog");
-  return postEntries.map((entry) => ({
-    params: { slug: createSlug(entry.data.title, entry.slug) },
-    props: { entry },
-  }));
+  return postEntries.map((entry) => {
+    const slug = createSlug(entry.data.title, entry.slug);
+    return {
+      params: {slug},
+      props: {entry, slug},
+    };
+  });
 }
 
 interface Props {
   entry: CollectionEntry<"blog">;
+  slug: string;
 }
 
-const { entry } = Astro.props;
+const {entry, slug} = Astro.props;
 const post: BlogSchema = entry.data;
 const { Content } = await entry.render();
 ---
@@ -31,5 +35,9 @@ const { Content } = await entry.render();
   tags={post.tags}
 >
   <Content />
+
+  <div class="talkyard-comments" data-discussion-id={slug} style="margin-top: 45px;">
+    <noscript>Please enable Javascript to view comments.</noscript>
+  </div>
 
 </PostLayout>

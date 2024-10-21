@@ -12,16 +12,20 @@ const {
   title = SITE_TITLE,
   description = SITE_DESCRIPTION,
   includeSidebar = true,
+  includeComments = false,
   sideBarActiveItemID,
-  ogType,
+  ogType
 } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" data-theme="night">
-  <head>
+<head title={title}>
     <BaseHead title={title} description={description} image={image} , ogType={ogType} />
     {TRANSITION_API && <ViewTransitions />}
+  {includeComments && (<script>talkyardServerUrl = 'https://site-3llujd7fnz.talkyard.net';</script>
+      <script async defer src="https://c1.ty-cdn.net/-/talkyard-comments.min.js"></script>
+      <noscript>Please enable Javascript to view comments.</noscript>)}
   </head>
   <body>
     <div class="bg-base-100 drawer lg:drawer-open">
