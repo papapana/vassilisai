@@ -3,7 +3,7 @@ title: "What are flashloans?"
 description: "Common patterns to remember when testing a smart contract with viem"
 pubDate: "Oct 21 2024"
 heroImage: "/intro_to_flashloans.webp"
-tags: [ "hardhat", "solidity", "blockchain", "testing" ]
+tags: [ "blockchain", "flashloans" ]
 ---
 
 # What are flashloans ?
