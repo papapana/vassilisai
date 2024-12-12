@@ -1,6 +1,6 @@
 ---
 title: "What are flashloans?"
-description: "Common patterns to remember when testing a smart contract with viem"
+description: "The novel type of loans that are unique to the blockchain"
 pubDate: "Oct 21 2024"
 heroImage: "/intro_to_flashloans.webp"
 tags: [ "blockchain", "flashloans" ]

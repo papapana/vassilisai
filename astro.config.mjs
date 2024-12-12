@@ -3,6 +3,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwind from "@astrojs/tailwind";
 import partytown from "@astrojs/partytown";
+import {targetBlank} from "./src/plugins/targetBlank";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,6 +13,8 @@ export default defineConfig({
       config: {
         forward: ["datalayer.push"]
       }
-    })
-  ]
+    })],
+  markdown: {
+    rehypePlugins: [[targetBlank, {domain: 'vassilis.ai'}]],
+  }
 });
