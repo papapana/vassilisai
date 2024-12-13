@@ -20,16 +20,15 @@ const {
 
 <!doctype html>
 <html lang="en" data-theme="night">
+<!--suppress HtmlRequiredTitleElement -->
 <head title={title}>
   <BaseHead title={title} description={description} image={image} , ogType={ogType}/>
   {TRANSITION_API &&
       <ViewTransitions/>}
-  {includeComments && (<script>talkyardServerUrl = 'https://site-3llujd7fnz.talkyard.net';</script>
-      <script async is:inline src = "https://c1.ty-cdn.net/-/talkyard-comments.min.js" ></script>
-      <noscript>Please enable Javascript to view comments.</noscript>)}
   </head>
   <body>
     <div class="bg-base-100 drawer lg:drawer-open">
+      <!--suppress HtmlFormInputWithoutLabel -->
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content bg-base-100">
         <Header title={SITE_TITLE} />

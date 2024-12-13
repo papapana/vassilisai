@@ -3,6 +3,8 @@ import { type BlogSchema } from "../content/config";
 import BaseLayout from "./BaseLayout.astro";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
+import JamComments from '@jam-comments/astro';
+
 
 export interface Props extends BlogSchema {}
 
@@ -38,6 +40,10 @@ import { Image } from "astro:assets";
       }
       <div class="divider my-2"></div>
       <slot />
+      <hr />
+      <h3>Comments</h3>
+
+      <JamComments />
     </article>
   </main>
 </BaseLayout>
