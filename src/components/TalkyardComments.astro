@@ -1,0 +1,30 @@
+---
+// Frontmatter (if needed)
+---
+
+<div class="talkyard-comments" data-discussion-id="" style="margin-top: 45px;">
+    <noscript>Please enable JavaScript to view comments.</noscript>
+</div>
+<!--<script>talkyardServerUrl = 'https://site-3llujd7fnz.talkyard.net';</script>-->
+<!--<script async is:inline src = "https://c1.ty-cdn.net/-/talkyard-comments.min.js" ></script>-->
+
+<script is:inline>
+    // Set the Talkyard server URL
+    window.talkyardServerUrl = 'https://site-3llujd7fnz.talkyard.net';
+
+    // Function to load the Talkyard script
+    function loadTalkyard() {
+        const script = document.createElement('script');
+        script.src = `${window.talkyardServerUrl}/-/talkyard-comments.min.js`;
+        script.async = true;
+        script.defer = true;
+        document.body.appendChild(script);
+    }
+
+    // Load Talkyard when the DOM is fully loaded
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadTalkyard);
+    } else {
+        loadTalkyard();
+    }
+</script>
