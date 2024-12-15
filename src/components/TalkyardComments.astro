@@ -1,5 +1,4 @@
 ---
-// Frontmatter (if needed)
 ---
 
 <div class="talkyard-comments" data-discussion-id="" style="margin-top: 45px;">
@@ -13,11 +12,18 @@
     window.talkyardServerUrl = 'https://site-3llujd7fnz.talkyard.net';
 
     // Function to load the Talkyard script
-    function loadTalkyard() {
+   function loadTalkyard() {
+        const tyScript = document.getElementById('ty-script');
+        if (tyScript) {
+            tyScript.remove();
+        }
         const script = document.createElement('script');
-        script.src = `${window.talkyardServerUrl}/-/talkyard-comments.min.js`;
+        const timestamp = new Date().getTime();
+        script.src = `${window.talkyardServerUrl}/-/talkyard-comments.min.js?v=${timestamp}`;
+        script.id = 'ty-script';
         script.async = true;
         script.defer = true;
+        script.type = 'text/javascript';
         document.body.appendChild(script);
     }
 
@@ -27,4 +33,5 @@
     } else {
         loadTalkyard();
     }
+
 </script>
