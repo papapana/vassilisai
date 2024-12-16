@@ -42,44 +42,44 @@ import { Image } from "astro:assets";
       <slot />
       <hr />
       <h3>Comments</h3>
-
+      <TalkyardComments />
       <!--<div id="talkyard" data-role="collapsible" data-inset="false" data-content-theme="false" data-mini="true" data-collapsed-icon="carat-l" data-expanded-icon="carat-d" data-iconpos="right">-->
       <!--  <h4>Comments</h4>-->
       <!--  <div id="ty-comments" class="talkyard-comments" data-discussion-id="" style="margin-top: 5px;"></div>-->
       <!--</div>-->
 
-      <div class="talkyard-comments" data-discussion-id="" style="margin-top: 45px;">
-        <noscript>Please enable JavaScript to view comments.</noscript>
-      </div>
+      <!--<div class="talkyard-comments" data-discussion-id="" style="margin-top: 45px;">-->
+      <!--  <noscript>Please enable JavaScript to view comments.</noscript>-->
+      <!--</div>-->
 
-      <script is:inline>
-        // Set the Talkyard server URL
-        window.talkyardServerUrl = 'https://site-3llujd7fnz.talkyard.net';
+      <!--<script is:inline>-->
+      <!--  // Set the Talkyard server URL-->
+      <!--  window.talkyardServerUrl = 'https://site-3llujd7fnz.talkyard.net';-->
 
-        // Function to load the Talkyard script
-        function loadTalkyard() {
-          const tyScript = document.getElementById('ty-script');
-          if (tyScript) {
-            tyScript.remove();
-          }
-          const script = document.createElement('script');
-          const timestamp = new Date().getTime();
-          script.src = `${window.talkyardServerUrl}/-/talkyard-comments.min.js?v=${timestamp}`;
-          script.id = 'ty-script';
-          script.async = true;
-          script.defer = true;
-          script.type = 'text/javascript';
-          document.head.appendChild(script);
-        }
+      <!--  // Function to load the Talkyard script-->
+      <!--  function loadTalkyard() {-->
+      <!--    const tyScript = document.getElementById('ty-script');-->
+      <!--    if (tyScript) {-->
+      <!--      tyScript.remove();-->
+      <!--    }-->
+      <!--    const script = document.createElement('script');-->
+      <!--    const timestamp = new Date().getTime();-->
+      <!--    script.src = `${window.talkyardServerUrl}/-/talkyard-comments.min.js?v=${timestamp}`;-->
+      <!--    script.id = 'ty-script';-->
+      <!--    script.async = true;-->
+      <!--    script.defer = true;-->
+      <!--    script.type = 'text/javascript';-->
+      <!--    document.head.appendChild(script);-->
+      <!--  }-->
 
-        // Load Talkyard when the DOM is fully loaded
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', loadTalkyard);
-        } else {
-          loadTalkyard();
-        }
+      <!--  // Load Talkyard when the DOM is fully loaded-->
+      <!--  if (document.readyState === 'loading') {-->
+      <!--    document.addEventListener('DOMContentLoaded', loadTalkyard);-->
+      <!--  } else {-->
+      <!--    loadTalkyard();-->
+      <!--  }-->
 
-      </script>
+
 
     </article>
   </main>

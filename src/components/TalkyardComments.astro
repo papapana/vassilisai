@@ -1,37 +1,65 @@
 ---
 ---
 
+<script is:inline>talkyardServerUrl='https://site-3llujd7fnz.talkyard.net';</script>
+<script is:inline async defer src="https://c1.ty-cdn.net/-/talkyard-comments.min.js"></script>
+<script is:inline>if(window._loadingTalkyardScript) window.location.href = window.location.href; </script>
+<!-- You can specify a per page discussion id on the next line, if your URLs might change. -->
 <div class="talkyard-comments" data-discussion-id="" style="margin-top: 45px;">
-    <noscript>Please enable JavaScript to view comments.</noscript>
+<noscript>Please enable Javascript to view comments.</noscript>
+
 </div>
-<!--<script>talkyardServerUrl = 'https://site-3llujd7fnz.talkyard.net';</script>-->
-<!--<script async is:inline src = "https://c1.ty-cdn.net/-/talkyard-comments.min.js" ></script>-->
 
-<script is:inline>
-    // Set the Talkyard server URL
-    window.talkyardServerUrl = 'https://site-3llujd7fnz.talkyard.net';
+<!--<div class="talkyard-comments" data-discussion-id="" style="margin-top: 45px;">-->
+<!--    <noscript>Please enable JavaScript to view comments.</noscript>-->
+<!--</div>-->
+<!--&lt;!&ndash;<script>talkyardServerUrl = 'https://site-3llujd7fnz.talkyard.net';</script>&ndash;&gt;-->
+<!--&lt;!&ndash;<script async is:inline src = "https://c1.ty-cdn.net/-/talkyard-comments.min.js" ></script>&ndash;&gt;-->
 
-    // Function to load the Talkyard script
-   function loadTalkyard() {
-        const tyScript = document.getElementById('ty-script');
-        if (tyScript) {
-            tyScript.remove();
-        }
-        const script = document.createElement('script');
-        const timestamp = new Date().getTime();
-        script.src = `${window.talkyardServerUrl}/-/talkyard-comments.min.js?v=${timestamp}`;
-        script.id = 'ty-script';
-        script.async = true;
-        script.defer = true;
-        script.type = 'text/javascript';
-        document.body.appendChild(script);
-    }
+<!--<script is:inline>-->
+<!--    // Set the Talkyard server URL-->
+<!--    window.talkyardServerUrl = 'https://site-3llujd7fnz.talkyard.net';-->
+<!--    // if(window._loadingTalkyardScript) throw Error("Talkyard comments script loaded twice [TyEEMBJSLD2]");-->
+<!-- // Set the flag to true-->
+<!--    // Function to load the Talkyard script-->
+<!--   // function loadTalkyard() {-->
+<!--   //     try {-->
+<!--   //          let script = document.getElementById('ty-script');-->
+<!--   //          if (script) {-->
+<!--   //              script.remove();-->
+<!--   //              console.log('Talkyard is already loaded.');-->
+<!--   //          }-->
+<!--   //         if(window._loadingTalkyardScript) {-->
+<!--   //             window._loadingTalkyardScript = false;-->
+<!--   //         }-->
+<!--   //          console.log("not loaded!")-->
+<!--   //          script = document.createElement('script');-->
+<!--   //          script.src = `${window.talkyardServerUrl}/-/talkyard-comments.min.js`;-->
+<!--   //          script.id = 'ty-script';-->
+<!--   //          script.async = true;-->
+<!--   //          script.defer = true;-->
+<!--   //          script.type = 'text/javascript';-->
+<!--   //-->
+<!--   //          document.head.appendChild(script);-->
+<!--   //      } catch(error) {-->
+<!--   //          console.log(`Error occurred: ${error}`);-->
+<!--   //      }-->
+<!--   //  }-->
+<!--   //-->
+<!--   //  console.log("inline script called")-->
+<!--   //  // Load Talkyard when the DOM is fully loaded-->
+<!--   //  if (document.readyState === 'loading') {-->
+<!--   //      document.addEventListener('DOMContentLoaded', loadTalkyard);-->
+<!--   //      console.log("readystate called");-->
+<!--   //  } else {-->
+<!--   //      try {-->
+<!--   //          if(!window._loadingTalkyardScript) {-->
+<!--   //              loadTalkyard();-->
+<!--   //          }-->
+<!--   //      } catch(error) {-->
+<!--   //          console.error(`Error occurred: ${error}`);-->
+<!--   //      }-->
+<!--   //      console.log("Load talkyard called!");-->
+<!--   //  }-->
 
-    // Load Talkyard when the DOM is fully loaded
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', loadTalkyard);
-    } else {
-        loadTalkyard();
-    }
-
-</script>
+<!--</script>-->
