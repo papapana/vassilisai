@@ -1,6 +1,6 @@
 ---
 title: "What is the intuition behind the implementation of a flashloan?"
-description: "How to understand"
+description: "How to grasp the main idea behind implementing flashloans"
 pubDate: "Feb 08 2025"
 heroImage: "/intuition_of_flashloans.webp"
 tags: [ "blockchain", "flashloans", "intuition", "pseudocode" ]
